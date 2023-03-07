@@ -21,7 +21,8 @@ export default function cooklang(cooklangConfig = {}): AstroIntegration {
 					// Extract parts.
 					const { ingredients, cookwares, metadata, steps, shoppingList } = recipe;
 
-					// TODO: Assemble parts into human-readable format and render (with Markdown?)
+					// TODO: Assemble parts into human-readable format and render (as Markdown?)
+					// We'll just use the raw file contents for now.
 					const body = contents
 
 					entryBodyByFileIdCache.set(fileUrl.pathname, body);
@@ -39,6 +40,8 @@ export default function cooklang(cooklangConfig = {}): AstroIntegration {
 				const contentEntryType = {
 					extensions: ['.cook'],
 					getEntryInfo,
+
+					// I don't think we need this yet...
 					// contentModuleTypes: await fs.promises.readFile(
 					// 	new URL('../template/content-module-types.d.ts', import.meta.url),
 					// 	'utf-8'
@@ -49,6 +52,8 @@ export default function cooklang(cooklangConfig = {}): AstroIntegration {
 
 				addPageExtension('.cook');
 
+				// Using my vite plugin for now, but we probably want a custom
+				// transformer so we can use `entryBodyByFileIdCache.get()`.
 				const viteConfig: InlineConfig = {
 					plugins: [cooklangVite()],
 				};
