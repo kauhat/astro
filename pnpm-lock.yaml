@@ -2769,6 +2769,47 @@ importers:
       '@astrojs/cloudflare': link:../../..
       astro: link:../../../../../astro
 
+  packages/integrations/cooklang:
+    specifiers:
+      '@cooklang/cooklang-ts': ^1.2.3
+      '@types/chai': ^4.3.1
+      '@types/html-escaper': ^3.0.0
+      '@types/mocha': ^9.1.1
+      astro: workspace:*
+      astro-scripts: workspace:*
+      chai: ^4.3.6
+      devalue: ^4.2.0
+      gray-matter: ^4.0.3
+      linkedom: ^0.14.12
+      mocha: ^9.2.2
+      vite: ^4.0.3
+      vite-plugin-cooklang: ^0.1.1
+      zod: ^3.17.3
+    dependencies:
+      gray-matter: 4.0.3
+      vite-plugin-cooklang: 0.1.1_vite@4.1.2
+      zod: 3.20.6
+    devDependencies:
+      '@cooklang/cooklang-ts': 1.2.3
+      '@types/chai': 4.3.4
+      '@types/html-escaper': 3.0.0
+      '@types/mocha': 9.1.1
+      astro: link:../../astro
+      astro-scripts: link:../../../scripts
+      chai: 4.3.7
+      devalue: 4.2.3
+      linkedom: 0.14.21
+      mocha: 9.2.2
+      vite: 4.1.2
+
+  packages/integrations/cooklang/test/fixtures/cooklang-collection:
+    specifiers:
+      '@astrojs/cooklang': workspace:*
+      astro: workspace:*
+    dependencies:
+      '@astrojs/cooklang': link:../../..
+      astro: link:../../../../../astro
+
   packages/integrations/deno:
     specifiers:
       astro: workspace:*
@@ -5764,6 +5805,10 @@ packages:
     resolution: {integrity: sha512-MVbXLbTcAotOPUj0pAMhVtJ+3/kFkwJqc5qNOleOZTv6QkZZABDMS21dSrSlVswEHwrpWC03e4fWytjqKvuE2A==}
     dependencies:
       mime: 3.0.0
+    dev: true
+
+  /@cooklang/cooklang-ts/1.2.3:
+    resolution: {integrity: sha512-v+y3DW78kfptQNkx7TmlcFz1CV0Jc+t9Pz4TG66vd56E9dz4inWaDGIt7b3Bo+pcutJkdgrZC8qrgWYmUF23Mw==}
     dev: true
 
   /@csstools/postcss-cascade-layers/1.1.1_postcss@8.4.21:
@@ -15429,6 +15474,17 @@ packages:
       imagetools-core: 3.3.1
     transitivePeerDependencies:
       - rollup
+    dev: false
+
+  /vite-plugin-cooklang/0.1.1_vite@4.1.2:
+    resolution: {integrity: sha512-k7IGbD/mkLnoe5AmgDHA7chB0eRA/EN89jaWHZnBRSDk0S9VGhiK0x6n/9MAOUXeuwSwSMJnG55vyztz5GwG+w==}
+    peerDependencies:
+      vite: ^3.0.0 || ^4.0.0
+    peerDependenciesMeta:
+      vite:
+        optional: true
+    dependencies:
+      vite: 4.1.2
     dev: false
 
   /vite-plugin-pwa/0.11.11_workbox-window@6.5.4:

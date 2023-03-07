@@ -1,0 +1,10 @@
+{
+  "name": "@test/cooklang-content-collections",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@astrojs/cooklang": "workspace:*",
+    "astro": "workspace:*"
+  },
+  "devDependencies": {}
+}
